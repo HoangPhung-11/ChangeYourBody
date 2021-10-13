@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calo.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
+</head>
+<body>
+    <!---------------------Nav Bar--------------------->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" id="navbar__logo">HoangPhung</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="#home" class="navbar__links" id="home-page">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#about" class="navbar__links" id="about-page">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#bmi" class="navbar__links" id="bmi-page">BMI</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#diet" class="navbar__links" id="diet-page">Diet</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="#sign-up" class="button" id="signup">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!---------------------Home Section--------------------->
+    <div class="hero" id="home">
+        <div class="hero__container">
+            <h1 class="hero__heading">Choose your <span>body</span></h1>
+            <p class="hero__description">Unlimited Possibilities</p>
+            <button class="main__btn"><a href="#about">Explore</a></button>
+        </div>
+    </div>
+
+    <!---------------------About Section--------------------->
+    <div class="main" id="about">
+        <div class="main__container">
+            <div class="main__img--container">
+                <div class="main__img--card"><i class="fas fa-layer-group"></i></div>
+            </div>
+            <div class="main__content">
+                <h1>What do we do</h1>
+                <h2>We help you managing your diet</h2>
+                <p>Find your BMI here</p>
+                <button class="main__btn"><a href="#bmi">Calculate BMI</a></button>
+            </div>
+        </div>
+    </div>
+
+     <!-- BMI Section -->
+      <div class="bmi" id="bmi">
+        <h1>Calculate your BMI</h1>
+        <div class="bmi__wrapper">
+          <div class="bmi__card">
+                <p class="bmiText">Height</p>
+                <input type="number" id="heightInput">
+                <p class="bmiText">Weight</p>
+                <input type="number" id="weightInput">
+                <p id="result"></p>
+                <button class="bmi__btn" id="button">Calculate</button>
+                <p id="info" class="bmiText">Please enter your height [cm] and weight [kg]</p>
+                <p id="bodyStatus"></p>
+          </div>
+        </div>
+      </div>
+
+    <!--Diet section-->
+    <div class="diet" id="diet">
+        <h1>Calculate your diet</h1>
+        <div class="diet__wrapper">
+          <div class="diet__card">
+                <a href="https://www.uncledavesenterprise.com/file/health/Food%20Calories%20List.pdf" target="_blank" >Calories Table</a>
+                <div class="app__add">
+                  <input id="food" type="text" class="app_add-input"placeholder="Add your new food"/>
+                  <input id="calories" type="number" class="app_add-input"placeholder="Add the calories (g)"/>
+                  <i class="far fa-plus-square fa-3x" id="addFood"></i>
+                </div>
+                <div class="app__content"></div>
+                <div class="app__footer">
+                  <div class="task-pending">
+                    Your meal contains
+                    <span id="calo-count">0</span>
+                    calories
+                  </div>
+                  <button id="btn-clear-all">Clear All</button>
+                </div>
+              </div>
+            </div>          
+          </div>
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="calo.js"></script>
+
+</body>
+</html>
